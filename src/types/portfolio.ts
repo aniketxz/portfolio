@@ -13,6 +13,7 @@ export interface Project {
 	image: string;
 	tags: string[];
 	url: string;
+	liveUrl?: string;
 }
 
 export interface Blog {
@@ -32,7 +33,7 @@ export interface PortfolioData {
 	email: string;
 	calUrl: string;
 	quote: { text: string; author: string };
-	social: { twitter: string; linkedin: string; github: string };
+	social: { twitter?: string; linkedin: string; github: string };
 	githubUsername: string;
 	experience: Experience[];
 	projects: Project[];

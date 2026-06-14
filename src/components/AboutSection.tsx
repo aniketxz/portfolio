@@ -8,14 +8,14 @@ export function AboutSection({ data }: AboutSectionProps) {
 	return (
 		<section className="mt-20">
 			<div>
-				<p className="text-neutral-500 dark:text-neutral-400 text-sm">About</p>
+				<p className="text-neutral-500 dark:text-neutral-400 text-sm">Who I am</p>
 				<h2 className="mt-1 text-2xl font-bold text-neutral-900 dark:text-neutral-100">
-					Me
+					About Me
 				</h2>
 			</div>
 			<div className="mt-8 flex flex-col gap-4">
 				{data.about.map((paragraph, i) => (
-					<p key={i} className="text-neutral-500 dark:text-neutral-400">
+					<p key={i} className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
 						{paragraph}
 					</p>
 				))}

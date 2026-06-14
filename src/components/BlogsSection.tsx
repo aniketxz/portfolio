@@ -1,4 +1,4 @@
-import { Calendar, ExternalLink } from "lucide-react";
+import { Calendar } from "lucide-react";
 import type { PortfolioData } from "@/types/portfolio";
 
 interface BlogsSectionProps {
@@ -10,7 +10,7 @@ export function BlogsSection({ data }: BlogsSectionProps) {
 		<section id="blogs" className="mt-20">
 			<div>
 				<p className="text-neutral-500 dark:text-neutral-400 text-sm">
-					Featured
+					Articles & Writing
 				</p>
 				<h2 className="mt-1 text-2xl font-bold text-neutral-900 dark:text-neutral-100">
 					Blogs
@@ -26,14 +26,14 @@ export function BlogsSection({ data }: BlogsSectionProps) {
 						rel="noopener noreferrer"
 						className="group block h-full"
 					>
-						<div className="flex h-full flex-col rounded-md border border-dashed border-black/20 bg-black/5 p-4 transition-all dark:border-white/10 dark:bg-white/5">
+						<div className="flex h-full flex-col rounded-md border border-dashed border-black/20 bg-black/5 p-4 transition-all duration-200 hover:bg-black/[0.08] dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/[0.08]">
 							<h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100 group-hover:text-neutral-600 dark:group-hover:text-neutral-300 group-hover:underline">
 								{blog.title}
 							</h3>
-							<p className="mt-1 text-neutral-500 dark:text-neutral-400 text-sm">
+							<p className="mt-1 text-neutral-600 dark:text-neutral-400 text-sm flex-1">
 								{blog.description}
 							</p>
-							<div className="mt-2 flex flex-wrap items-center gap-2">
+							<div className="mt-3 flex flex-wrap items-center gap-2">
 								{blog.tags.map((tag) => (
 									<span
 										key={tag}
@@ -42,7 +42,7 @@ export function BlogsSection({ data }: BlogsSectionProps) {
 										{tag}
 									</span>
 								))}
-								<span className="flex items-center gap-1 text-xs text-neutral-500 dark:text-neutral-400">
+								<span className="flex items-center gap-1 text-xs text-neutral-500 dark:text-neutral-400 ml-auto">
 									<Calendar className="h-3 w-3" aria-hidden="true" />
 									{blog.date}
 								</span>
@@ -75,7 +75,6 @@ export function BlogsSection({ data }: BlogsSectionProps) {
 								className="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 inline-flex items-center gap-1 text-sm transition-colors hover:underline hover:underline-offset-4"
 							>
 								View profile
-								<ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
 							</a>
 						</div>
 						<div className="overflow-hidden rounded-md bg-neutral-50 dark:bg-neutral-800 p-3">
@@ -83,6 +82,7 @@ export function BlogsSection({ data }: BlogsSectionProps) {
 								alt={`GitHub contribution chart for ${data.githubUsername}`}
 								className="w-full rounded"
 								src={`https://ghchart.rshah.org/${data.githubUsername}`}
+								loading="lazy"
 							/>
 						</div>
 					</div>

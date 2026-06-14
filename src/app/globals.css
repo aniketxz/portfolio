@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
 	--background: #ffffff;
 	--foreground: #171717;
@@ -10,13 +12,9 @@
 	--foreground: #ededed;
 }
 
-.light {
-	--background: #ededed;
-	--foreground: #171717;
-}
-
 html {
 	scroll-behavior: smooth;
+	scroll-padding-top: 67px;
 }
 
 body {

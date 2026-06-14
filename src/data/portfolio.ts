@@ -1,18 +1,24 @@
 import { PortfolioData } from "@/types/portfolio";
 import {
   siReact,
-  siJavascript,
   siTypescript,
   siNextdotjs,
   siTailwindcss,
+  siNodedotjs,
+  siPostgresql,
+  siPrisma,
+  siMongodb,
 } from "simple-icons";
 
 export const SKILLS = [
-  siReact,
-  siJavascript,
   siTypescript,
+  siNodedotjs,
+	siReact,
   siNextdotjs,
   siTailwindcss,
+  siPostgresql,
+  siPrisma,
+  siMongodb,
 ];
 
 export const data: PortfolioData = {
@@ -24,15 +30,15 @@ export const data: PortfolioData = {
 		"Specialized in Next.js, React Native, and robust backend architectures with a track record of reducing load times by 90%.",
 		"Currently pursuing a Bachelor of Technology in Computer Science and Engineering.",
 	],
-	resumeUrl: "https://github.com/aniketxz",
+	resumeUrl: "https://drive.google.com/file/d/1LzQfyG3PJ6vKXB64iOUe-wU8_uuPG1rV/view",
 	email: "aniketkumar8x@gmail.com",
 	calUrl: "",
 	quote: {
-		text: "Engineered a fault-tolerant background execution engine... delivering real-time status updates via WebSockets.",
-		author: "Aniket Kumar Mahato",
+		text: "I'm a very neat monster.",
+		author: "Dexter Morgan",
 	},
 	social: {
-		twitter: "",
+		twitter: undefined,
 		linkedin: "https://linkedin.com/in/aniket-kumar-mahato",
 		github: "https://github.com/aniketxz",
 	},
@@ -45,9 +51,9 @@ export const data: PortfolioData = {
 			location: "Noida, India",
 			skills: ["Next.js", "React", "SSR", "SEO"],
 			highlights: [
-				"Spearheaded a migration of 25+ landing pages to Next.js within a 4-day deadline[cite: 12].",
-				"Achieved a 90% reduction in initial page load times, from 6s down to 500ms[cite: 12].",
-				"Optimized Core Web Vitals using SSR and static generation for high-performance SEO[cite: 13].",
+				"Spearheaded a migration of 25+ landing pages to Next.js within a 4-day deadline.",
+				"Achieved a 90% reduction in initial page load times, from 6s down to 500ms.",
+				"Optimized Core Web Vitals using SSR and static generation for high-performance SEO.",
 			],
 		},
 		{
@@ -85,7 +91,7 @@ export const data: PortfolioData = {
 			description:
 				"Interactive video learning interface with real-time milestone tracking and Stripe payment integration.",
 			image:
-				"https://images.unsplash.com/photo-1467232004584-a241de8bcf0d?w=800&q=80",
+				"https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80",
 			tags: ["React.js", "Node.js", "MongoDB", "Clerk", "Stripe"],
 			url: "https://github.com/aniketxz",
 		},
