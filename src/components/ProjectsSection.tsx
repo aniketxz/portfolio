@@ -8,7 +8,7 @@ interface ProjectsSectionProps {
 
 export function ProjectsSection({ data }: ProjectsSectionProps) {
 	return (
-		<section id="projects" className="mt-20">
+		<section id="projects">
 			<div>
 				<p className="text-neutral-500 dark:text-neutral-400 text-sm">
 					Things I&apos;ve built
