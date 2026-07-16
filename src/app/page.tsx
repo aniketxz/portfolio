@@ -12,11 +12,11 @@ import SideBorders from "@/components/common/SideBorders";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white dark:bg-neutral-950">
+    <div className="min-h-screen dark:bg-neutral-950">
       <Navbar />
       <div
         id="top"
-        className="animate-fade-in-blur container mx-auto max-w-200 border-r border-l border-neutral-200 px-10 pb-24 dark:border-neutral-800"
+        className="animate-fade-in-blur container bg-white dark:bg-black mx-auto max-w-3xl px-12 pb-24 dark:border-neutral-800"
       >
         <SideBorders />
 

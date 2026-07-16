@@ -2,6 +2,7 @@ import { FileText, Send } from "lucide-react";
 import { SkillBadge } from "./SkillBadge";
 import type { PortfolioData } from "@/types/portfolio";
 import { SKILLS } from "@/data/portfolio";
+import Image from "next/image";
 
 interface HeroSectionProps {
   data: PortfolioData;
@@ -10,11 +11,8 @@ interface HeroSectionProps {
 export function HeroSection({ data }: HeroSectionProps) {
   return (
     <section id="about" className="pt-12">
-      <div
-        className="flex size-24 shrink-0 items-center justify-center overflow-hidden rounded-full bg-linear-to-br from-indigo-400 via-purple-500 to-pink-500 text-2xl font-bold text-white select-none"
-        aria-hidden="true"
-      >
-        XD
+      <div className="relative w-full bg-amber-400" aria-hidden="true">
+        <Image height={96} width={1200} className="w-full h-56 object-cover object-top" src={"/dawn.jpg"} alt="" />
       </div>
 
       <div className="mt-8 flex flex-col gap-2">
