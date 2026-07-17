@@ -11,9 +11,9 @@ export function Footer({ data }: FooterProps) {
     <>
       {/* Quote */}
       <section>
-        <blockquote className="border-l-2 border-neutral-400/50 pl-4 text-lg text-neutral-500 italic dark:text-neutral-400">
+        <blockquote className="border-l-2 border-muted-foreground/40 pl-4 text-lg text-muted-foreground italic">
           &ldquo;{data.quote.text}&rdquo;
-          <footer className="mt-2 text-sm text-neutral-900 not-italic dark:text-neutral-100">
+          <footer className="mt-2 text-sm text-foreground not-italic">
             — {data.quote.author}
           </footer>
         </blockquote>
@@ -28,7 +28,7 @@ export function Footer({ data }: FooterProps) {
               href={data.social.twitter}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-neutral-500 transition-colors hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
+              className="social-link"
               aria-label="X (Twitter)"
             >
               <svg
@@ -51,7 +51,7 @@ export function Footer({ data }: FooterProps) {
             href={data.social.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-neutral-500 transition-colors hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
+            className="social-link"
             aria-label="LinkedIn"
           >
             <svg
@@ -73,7 +73,7 @@ export function Footer({ data }: FooterProps) {
             href={data.social.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-neutral-500 transition-colors hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
+            className="social-link"
             aria-label="GitHub"
           >
             <svg
@@ -93,7 +93,7 @@ export function Footer({ data }: FooterProps) {
           {/* Email */}
           <a
             href={`mailto:${data.email}`}
-            className="text-neutral-500 transition-colors hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
+            className="social-link"
             aria-label="Email"
           >
             <svg

@@ -27,13 +27,13 @@ export function HeroSection({ data }: HeroSectionProps) {
         <p className="text-sm font-medium text-neutral-400 dark:text-neutral-500">
           Hi! I am
         </p>
-        <h1 className="text-4xl font-bold tracking-tight text-neutral-900 md:text-6xl dark:text-neutral-100">
+        <h1 className="text-4xl font-bold tracking-tight text-foreground md:text-6xl">
           {data.name}
         </h1>
-        <span className="text-neutral-700 dark:text-neutral-400">
+        <span className="text-muted-foreground">
           {data.title}
         </span>
-        <p className="mt-1 max-w-xl text-base text-neutral-500 dark:text-neutral-400">
+        <p className="mt-1 max-w-xl text-base text-muted-foreground">
           {data.bio}
         </p>
 
@@ -74,14 +74,14 @@ export function HeroSection({ data }: HeroSectionProps) {
           href={data.resumeUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex h-9 items-center justify-center gap-2 rounded-md bg-neutral-900 px-4 py-2 text-sm font-medium whitespace-nowrap text-white transition-all hover:bg-neutral-700 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-300"
+          className="btn-primary"
         >
           <FileText className="size-4" />
           Resume / CV
         </a>
         <a
           href={`mailto:${data.email}`}
-          className="inline-flex h-9 items-center justify-center gap-2 rounded-md border border-neutral-200 bg-white px-4 py-2 text-sm font-medium whitespace-nowrap text-neutral-900 transition-all hover:bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800/30 dark:text-neutral-100 dark:hover:bg-neutral-800/60"
+          className="btn-secondary"
         >
           <Send className="size-4" />
           Get in touch

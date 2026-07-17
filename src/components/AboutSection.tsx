@@ -8,10 +8,10 @@ export function AboutSection({ data }: AboutSectionProps) {
   return (
     <section id="about">
       <div>
-        <p className="text-sm text-neutral-500 dark:text-neutral-400">
+        <p className="section-eyebrow">
           Who I am
         </p>
-        <h2 className="mt-1 text-2xl font-bold text-neutral-900 dark:text-neutral-100">
+        <h2 className="section-heading">
           About Me
         </h2>
       </div>
@@ -19,7 +19,7 @@ export function AboutSection({ data }: AboutSectionProps) {
         {data.about.map((paragraph, i) => (
           <p
             key={i}
-            className="leading-relaxed text-neutral-600 dark:text-neutral-400"
+            className="leading-relaxed text-muted-foreground"
           >
             {paragraph}
           </p>
