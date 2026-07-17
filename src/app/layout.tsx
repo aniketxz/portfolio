@@ -3,6 +3,7 @@ import { Hanken_Grotesk, Geist_Mono, Geist } from "next/font/google"
 import "./globals.css"
 import { cn } from "@/lib/utils"
 import { TooltipProvider } from "@/components/ui/tooltip"
+import { Toaster } from "@/components/ui/sonner"
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
@@ -54,7 +55,7 @@ export default function RootLayout({
 					}}
 				/>
 			</head>
-			<body className="min-h-full flex flex-col"><TooltipProvider>{children}</TooltipProvider></body>
+			<body className="min-h-full flex flex-col"><TooltipProvider>{children}</TooltipProvider><Toaster richColors position="bottom-right" /></body>
 		</html>
 	)
 }

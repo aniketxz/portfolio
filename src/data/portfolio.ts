@@ -43,8 +43,8 @@ export const data: PortfolioData = {
     author: "Dexter Morgan",
   },
   social: {
-    twitter: undefined,
-    linkedin: "https://linkedin.com/in/aniket-kumar-mahato",
+    twitter: "https://twitter.com/aniketxz",
+    linkedin: "https://linkedin.com/in/aniketxz",
     github: "https://github.com/aniketxz",
   },
   githubUsername: "aniketxz",

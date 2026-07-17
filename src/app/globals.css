@@ -41,6 +41,8 @@
   --foreground: oklch(0.145 0 0);          /* neutral-900 */
   --card: oklch(98.7% 0.002 197.1);        /* mist-100 */
   --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(98.7% 0.002 197.1);     /* same as card */
+  --popover-foreground: oklch(0.145 0 0);
   --muted: oklch(0.97 0 0);               /* neutral-50 */
   --muted-foreground: oklch(0.556 0 0);   /* neutral-500 */
   --border: oklch(0.922 0 0);             /* neutral-200 */
@@ -61,6 +63,8 @@
   --foreground: oklch(0.985 0 0);         /* near-white */
   --card: oklch(0.145 0 0);               /* neutral-900 */
   --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);            /* neutral-800 — slightly lighter than card */
+  --popover-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);             /* neutral-700 */
   --muted-foreground: oklch(0.708 0 0);  /* neutral-400 */
   --border: oklch(0.269 0 0);            /* neutral-800 — solid, not transparent */

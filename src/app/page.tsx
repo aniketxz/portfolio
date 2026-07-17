@@ -3,13 +3,13 @@ import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
 import { ExperienceSection } from "@/components/ExperienceSection";
 import { ProjectsSection } from "@/components/ProjectsSection";
-import { BlogsSection } from "@/components/BlogsSection";
-// import { ContactSection } from "@/components/ContactSection";
+// import { BlogsSection } from "@/components/BlogsSection";
 import { Separator } from "@/components/common/Separator";
 import { Footer } from "@/components/Footer";
 import SideBorders from "@/components/common/SideBorders";
 import { data } from "@/data/portfolio";
 import { GithubContributionGraph } from "@/components/GithubContributionGraph";
+import { ContactSection } from "@/components/ContactSection";
 
 export default function Home() {
   return (
@@ -25,15 +25,16 @@ export default function Home() {
         <Separator />
         <AboutSection data={data} />
         <Separator />
+        <GithubContributionGraph data={data} />
+        <Separator />
         <ExperienceSection data={data} />
         <Separator />
         <ProjectsSection data={data} />
         <Separator />
-        <GithubContributionGraph data={data} />
+        {/* <BlogsSection data={data} /> */}
+        {/* <Separator /> */}
+        <ContactSection data={data} />
         <Separator />
-        <BlogsSection data={data} />
-        <Separator />
-        {/* <ContactSection data={data} /> */}
         <Footer data={data} />
       </div>
     </div>

@@ -20,7 +20,7 @@ export function Footer({ data }: FooterProps) {
       </section>
 
       {/* Social links + copyright */}
-      <footer id="contact" className="mt-20 flex flex-col items-center gap-4">
+      <footer className="mt-20 flex flex-col items-center gap-4">
         <div className="flex items-center gap-6">
           {/* X / Twitter */}
           {data.social.twitter && (
