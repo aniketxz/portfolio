@@ -24,6 +24,16 @@ export interface Blog {
 	url: string;
 }
 
+export interface TechStackItem {
+	name: string;
+	iconKey?: string;
+}
+
+export interface TechStackCategory {
+	category: string;
+	items: TechStackItem[];
+}
+
 export interface PortfolioData {
 	name: string;
 	title: string;
@@ -39,6 +49,7 @@ export interface PortfolioData {
 	quote: { text: string; author: string };
 	social: { twitter?: string; linkedin: string; github: string };
 	githubUsername: string;
+	techStack: TechStackCategory[];
 	experience: Experience[];
 	projects: Project[];
 	blogs: Blog[];

@@ -1,15 +1,16 @@
+import { data } from "@/data/portfolio";
 import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
 import { ExperienceSection } from "@/components/ExperienceSection";
 import { ProjectsSection } from "@/components/ProjectsSection";
 // import { BlogsSection } from "@/components/BlogsSection";
-import { Separator } from "@/components/common/Separator";
-import { Footer } from "@/components/Footer";
 import SideBorders from "@/components/common/SideBorders";
-import { data } from "@/data/portfolio";
 import { GithubContributionGraph } from "@/components/GithubContributionGraph";
 import { ContactSection } from "@/components/ContactSection";
+import { TechStackSection } from "@/components/TechStackSection";
+import { Separator } from "@/components/common/Separator";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -24,6 +25,8 @@ export default function Home() {
         <HeroSection data={data} />
         <Separator />
         <AboutSection data={data} />
+        <Separator />
+        <TechStackSection data={data} />
         <Separator />
         <GithubContributionGraph data={data} />
         <Separator />

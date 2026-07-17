@@ -20,8 +20,10 @@ export function SkillBadge({
 
   const sizeClasses =
     size === "xs"
-      ? "px-2 py-0.5 text-xs font-medium"
-      : "px-2 py-1 text-sm font-bold";
+      ? "px-1.5 py-0.5 text-xs font-medium gap-1"
+      : "px-2 py-1 text-sm font-bold gap-1.5";
+
+  const iconClass = size === "xs" ? "size-3" : "size-4";
 
   return (
     <span className={`${baseClass} ${sizeClasses}`}>
@@ -30,7 +32,7 @@ export function SkillBadge({
         <svg
           role="img"
           viewBox="0 0 24 24"
-          className="size-4"
+          className={iconClass}
           fill={`#${icon.hex}`}
           aria-hidden="true"
         >
@@ -39,9 +41,7 @@ export function SkillBadge({
       )}
 
       {/* Title */}
-      <span className={variant === "icon-text" && icon ? "ml-1" : ""}>
-        {title}
-      </span>
+      <span>{title}</span>
     </span>
   );
 }

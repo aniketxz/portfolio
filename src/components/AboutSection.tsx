@@ -19,7 +19,7 @@ export function AboutSection({ data }: AboutSectionProps) {
         {data.about.map((paragraph, i) => (
           <p
             key={i}
-            className="leading-relaxed text-muted-foreground"
+            className="leading-relaxed text-sm text-muted-foreground"
           >
             {paragraph}
           </p>

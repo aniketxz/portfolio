@@ -48,6 +48,72 @@ export const data: PortfolioData = {
     github: "https://github.com/aniketxz",
   },
   githubUsername: "aniketxz",
+  techStack: [
+    {
+      category: "Languages",
+      items: [
+        { name: "TypeScript", iconKey: "siTypescript" },
+        { name: "JavaScript", iconKey: "siJavascript" },
+        { name: "HTML", iconKey: "siHtml5" },
+        { name: "CSS", iconKey: "siCss" },
+        { name: "SQL", iconKey: "" },
+      ],
+    },
+    {
+      category: "Frontend",
+      items: [
+        { name: "React", iconKey: "siReact" },
+        { name: "Next.js", iconKey: "siNextdotjs" },
+        { name: "Tailwind CSS", iconKey: "siTailwindcss" },
+        { name: "Expo", iconKey: "siExpo" },
+        { name: "Tanstack", iconKey: "siTanstack" },
+        { name: "Redux", iconKey: "siRedux" },
+      ],
+    },
+    {
+      category: "Backend",
+      items: [
+        { name: "Node.js", iconKey: "siNodedotjs" },
+        { name: "Express", iconKey: "siExpress" },
+        { name: "RabbitMQ", iconKey: "siRabbitmq" },
+        { name: "Drizzle", iconKey: "siDrizzle" },
+      ],
+    },
+    {
+      category: "Databases",
+      items: [
+        { name: "PostgreSQL", iconKey: "siPostgresql" },
+        { name: "MongoDB", iconKey: "siMongodb" },
+        { name: "Redis", iconKey: "siRedis" },
+      ],
+    },
+    {
+      category: "DevOps",
+      items: [
+        { name: "Docker", iconKey: "siDocker" },
+        { name: "Git", iconKey: "siGit" },
+        { name: "GitHub", iconKey: "siGithub" },
+        { name: "GitHub Actions", iconKey: "siGithubactions" },
+        { name: "Vercel", iconKey: "siVercel" },
+      ],
+    },
+    {
+      category: "AI & Tools",
+      items: [
+        { name: "Claude", iconKey: "siClaude" },
+        { name: "Cursor", iconKey: "siCursor" },
+        { name: "Bash", iconKey: "siGnubash" },
+        { name: "Antigravity CLI", iconKey: "" },
+      ],
+    },
+    {
+      category: "Learning",
+      items: [
+        { name: "LangGraph", iconKey: "siLanggraph" },
+        { name: "System Design", iconKey: "" },
+      ],
+    },
+  ],
   experience: [
     {
       company: "Makunai Global",
