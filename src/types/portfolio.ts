@@ -32,6 +32,10 @@ export interface PortfolioData {
 	resumeUrl: string;
 	email: string;
 	calUrl: string;
+	location: string;
+	timezone: string;
+	website: string;
+	phone: string;
 	quote: { text: string; author: string };
 	social: { twitter?: string; linkedin: string; github: string };
 	githubUsername: string;

@@ -5,10 +5,10 @@ import { ExperienceSection } from "@/components/ExperienceSection";
 import { ProjectsSection } from "@/components/ProjectsSection";
 import { BlogsSection } from "@/components/BlogsSection";
 // import { ContactSection } from "@/components/ContactSection";
-import { Footer } from "@/components/Footer";
-import { data } from "@/data/portfolio";
 import { Separator } from "@/components/common/Separator";
-import SideBorders from "@/components/common/SideBorders";
+import { Footer } from "@/components/Footer";
+import SideBorders from "@/components/common/SideBorders";  
+import { data } from "@/data/portfolio";
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
       <Navbar />
       <div
         id="top"
-        className="animate-fade-in-blur container bg-white dark:bg-black mx-auto max-w-3xl px-12 pb-24 dark:border-neutral-800"
+        className="animate-fade-in-blur container bg-white dark:bg-black mx-auto max-w-3xl px-7 md:px-12 pb-24 dark:border-neutral-800"
       >
         <SideBorders />
 

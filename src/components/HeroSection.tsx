@@ -1,8 +1,9 @@
-import { FileText, Send } from "lucide-react";
-import { SkillBadge } from "./SkillBadge";
-import type { PortfolioData } from "@/types/portfolio";
-import { SKILLS } from "@/data/portfolio";
 import Image from "next/image";
+import { Clock, FileText, Link2, Mail, MapPin, Send } from "lucide-react";
+import { SkillBadge } from "./SkillBadge";
+import { InfoStrip } from "./InfoStrip";
+import { SKILLS } from "@/data/portfolio";
+import type { PortfolioData } from "@/types/portfolio";
 
 interface HeroSectionProps {
   data: PortfolioData;
@@ -10,33 +11,62 @@ interface HeroSectionProps {
 
 export function HeroSection({ data }: HeroSectionProps) {
   return (
-    <section id="about" className="pt-12">
-      <div className="relative w-full bg-amber-400" aria-hidden="true">
-        <Image height={96} width={1200} className="w-full h-56 object-cover object-top" src={"/dawn.jpg"} alt="" />
+    <section id="about" className="pt-12 md:flex md:flex-col md:justify-center">
+      <div className="relative w-full" aria-hidden="true">
+        <Image
+          height={96}
+          width={1200}
+          priority
+          className="h-40 w-full rounded object-cover object-[0%_80%] md:h-56 opacity-90"
+          src={"/dawn.jpg"}
+          alt=""
+        />
       </div>
 
-      <div className="mt-8 flex flex-col gap-2">
-        <h1 className="text-4xl font-bold text-neutral-900 dark:text-neutral-100">
-          Hi, I&apos;m {data.name} —{" "}
-          <span className="text-neutral-500 dark:text-neutral-400">
-            A {data.title}.
-          </span>
+      <div className="mt-10 flex flex-col gap-3">
+        <p className="text-sm font-medium text-neutral-400 dark:text-neutral-500">
+          Hi! I am
+        </p>
+        <h1 className="text-4xl font-bold tracking-tight text-neutral-900 md:text-6xl dark:text-neutral-100">
+          {data.name}
         </h1>
-        <div className="mt-4 flex flex-wrap items-center gap-x-1.5 gap-y-2 text-base text-neutral-500 md:text-lg dark:text-neutral-400">
+        <span className="text-neutral-700 dark:text-neutral-400">
+          {data.title}
+        </span>
+        <p className="mt-1 max-w-xl text-base text-neutral-500 dark:text-neutral-400">
           {data.bio}
+        </p>
+
+        <div className="mt-4 flex flex-wrap gap-2">
+          {SKILLS.map((skill, idx) => (
+            <SkillBadge
+              key={idx}
+              icon={skill}
+              name={skill.title}
+              variant="icon-text"
+              size="sm"
+            />
+          ))}
         </div>
       </div>
 
-      <div className="mt-6 flex flex-wrap gap-2">
-        {SKILLS.map((skill, idx) => (
-          <SkillBadge
-            key={idx}
-            icon={skill}
-            name={skill.title}
-            variant="icon-text"
-            size="sm"
-          />
-        ))}
+      <div className="mt-6">
+        <InfoStrip
+          items={[
+            { icon: MapPin, label: data.location },
+            { icon: Clock, label: data.timezone },
+            { icon: Mail, label: data.email, href: `mailto:${data.email}` },
+            ...(data.website
+              ? [
+                  {
+                    icon: Link2,
+                    label: data.website.replace(/^https?:\/\//, ""),
+                    href: data.website,
+                  },
+                ]
+              : []),
+          ]}
+        />
       </div>
 
       <div className="mt-8 flex flex-wrap gap-4">
