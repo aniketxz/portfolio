@@ -7,8 +7,9 @@ import { BlogsSection } from "@/components/BlogsSection";
 // import { ContactSection } from "@/components/ContactSection";
 import { Separator } from "@/components/common/Separator";
 import { Footer } from "@/components/Footer";
-import SideBorders from "@/components/common/SideBorders";  
+import SideBorders from "@/components/common/SideBorders";
 import { data } from "@/data/portfolio";
+import { GithubContributionGraph } from "@/components/GithubContributionGraph";
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
       <Navbar />
       <div
         id="top"
-        className="animate-fade-in-blur container bg-white dark:bg-black mx-auto max-w-3xl px-7 md:px-12 pb-24 dark:border-neutral-800"
+        className="container mx-auto max-w-3xl animate-fade-in-blur bg-white px-7 pb-24 md:px-12 dark:border-neutral-800 dark:bg-black"
       >
         <SideBorders />
 
@@ -27,6 +28,8 @@ export default function Home() {
         <ExperienceSection data={data} />
         <Separator />
         <ProjectsSection data={data} />
+        <Separator />
+        <GithubContributionGraph data={data} />
         <Separator />
         <BlogsSection data={data} />
         <Separator />

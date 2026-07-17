@@ -11,7 +11,7 @@ interface HeroSectionProps {
 
 export function HeroSection({ data }: HeroSectionProps) {
   return (
-    <section id="about" className="pt-12 md:flex md:flex-col md:justify-center">
+    <section id="about" className="pt-8 md:flex md:flex-col md:justify-center">
       <div className="relative w-full" aria-hidden="true">
         <Image
           height={96}

@@ -63,7 +63,7 @@ export const data: PortfolioData = {
     },
     {
       company: "Magnifier Solutions",
-      role: "Software Engineer Intern",
+      role: "Software Developer Intern",
       period: "Aug 2025 – Oct 2025",
       location: "Remote",
       skills: ["Node.js", "Express", "JWT", "Bcrypt"],

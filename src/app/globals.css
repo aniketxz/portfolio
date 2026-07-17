@@ -39,7 +39,7 @@
 :root {
   --background: oklch(98.7% 0.002 197.1);  /* mist-100 */
   --foreground: oklch(0.145 0 0);          /* neutral-900 */
-  --card: oklch(1 0 0);                    /* white */
+  --card: oklch(98.7% 0.002 197.1);        /* mist-100 */
   --card-foreground: oklch(0.145 0 0);
   --muted: oklch(0.97 0 0);               /* neutral-50 */
   --muted-foreground: oklch(0.556 0 0);   /* neutral-500 */
@@ -59,7 +59,7 @@
 .dark {
   --background: oklch(0.145 0 0);         /* neutral-900 */
   --foreground: oklch(0.985 0 0);         /* near-white */
-  --card: oklch(0.205 0 0);               /* neutral-800 */
+  --card: oklch(0.145 0 0);               /* neutral-900 */
   --card-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);             /* neutral-700 */
   --muted-foreground: oklch(0.708 0 0);  /* neutral-400 */
@@ -81,7 +81,7 @@
   }
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 67px; /* accounts for sticky navbar height */
+    scroll-padding-top: 67px;
     @apply font-sans antialiased;
   }
   body {
@@ -186,4 +186,15 @@
 @utility text-link {
   @apply text-muted-foreground transition-colors
          hover:text-foreground hover:underline hover:underline-offset-4;
+}
+
+/*
+ * Hide scrollbar while preserving scroll behaviour
+ * Used by ContributionGraphCalendar for horizontal scroll
+ */
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
