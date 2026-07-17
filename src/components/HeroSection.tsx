@@ -17,7 +17,7 @@ export function HeroSection({ data }: HeroSectionProps) {
           height={96}
           width={1200}
           priority
-          className="h-40 w-full rounded object-cover object-[0%_80%] md:h-56 opacity-90"
+          className="h-40 w-full rounded object-cover object-[0%_80%] opacity-90 transition-[object-position] duration-700 ease-in-out md:h-56 dark:object-top"
           src={"/dawn.jpg"}
           alt=""
         />
