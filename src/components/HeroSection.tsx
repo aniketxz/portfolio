@@ -32,6 +32,8 @@ export function HeroSection({ data }: HeroSectionProps) {
         </h1>
         <span className="text-muted-foreground">
           {data.title}
+          <span className="mx-2">·</span>
+          B.Tech CSE &apos;26
         </span>
         <p className="mt-1 max-w-xl text-base text-muted-foreground">
           {data.bio}
@@ -79,10 +81,7 @@ export function HeroSection({ data }: HeroSectionProps) {
           <FileText className="size-4" />
           Resume / CV
         </a>
-        <a
-          href={`mailto:${data.email}`}
-          className="btn-secondary"
-        >
+        <a href={`mailto:${data.email}`} className="btn-secondary">
           <Send className="size-4" />
           Get in touch
         </a>

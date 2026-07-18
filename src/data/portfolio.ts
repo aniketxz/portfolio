@@ -36,7 +36,7 @@ export const data: PortfolioData = {
   calUrl: "",
   location: "Noida, UP",
   timezone: "GMT+5:30",
-  website: "aniketxz.dev",
+  website: "https://aniketxz.dev",
   phone: "+91 950 823 6050",
   quote: {
     text: "I'm a very neat monster.",
@@ -138,6 +138,19 @@ export const data: PortfolioData = {
         "Architected a secure Node.js backend with 4-tier Role-Based Access Control (RBAC).",
         "Refactored an AI-generated prototype into a modular, layered architecture to improve maintainability.",
         "Implemented JWT access/refresh token rotation and OTP-based authentication.",
+      ],
+    },
+  ],
+  education: [
+    {
+      institution: "Dr. APJ Abdul Kalam Techincal University",
+      degree: "B.Tech in Computer Science & Engineering",
+      grade: "7.6 CGPA",
+      period: "2022 - 2026",
+      location: "Ghaziabad, UP, India",
+      highlights: [
+        "Relevant coursework: Data Structures, Algorithms, DBMS, Operating Systems, Computer Networks.",
+        "Built multiple full-stack projects as part of coursework and personal learning.",
       ],
     },
   ],

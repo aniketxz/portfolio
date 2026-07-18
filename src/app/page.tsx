@@ -3,6 +3,7 @@ import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
 import { ExperienceSection } from "@/components/ExperienceSection";
+import { EducationSection } from "@/components/EducationSection";
 import { ProjectsSection } from "@/components/ProjectsSection";
 // import { BlogsSection } from "@/components/BlogsSection";
 import SideBorders from "@/components/common/SideBorders";
@@ -26,13 +27,15 @@ export default function Home() {
         <Separator />
         <AboutSection data={data} />
         <Separator />
+        <ProjectsSection data={data} />
+        <Separator />
         <TechStackSection data={data} />
         <Separator />
         <GithubContributionGraph data={data} />
         <Separator />
         <ExperienceSection data={data} />
         <Separator />
-        <ProjectsSection data={data} />
+        <EducationSection data={data} />
         <Separator />
         {/* <BlogsSection data={data} /> */}
         {/* <Separator /> */}

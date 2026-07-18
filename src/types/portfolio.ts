@@ -7,6 +7,15 @@ export interface Experience {
 	highlights: string[];
 }
 
+export interface Education {
+	institution: string;
+	degree: string;
+	period: string;
+	location: string;
+	grade?: string;
+	highlights: string[];
+}
+
 export interface Project {
 	name: string;
 	description: string;
@@ -51,6 +60,7 @@ export interface PortfolioData {
 	githubUsername: string;
 	techStack: TechStackCategory[];
 	experience: Experience[];
+	education: Education[];
 	projects: Project[];
 	blogs: Blog[];
 }
