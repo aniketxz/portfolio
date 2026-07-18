@@ -39,7 +39,7 @@
 :root {
   --background: oklch(98.7% 0.002 197.1);  /* mist-100 */
   --foreground: oklch(0.145 0 0);          /* neutral-900 */
-  --card: oklch(98.7% 0.002 197.1);        /* mist-100 */
+  --card: oklch(98.7% 0.002 197.1);        /* mist-50 */
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(98.7% 0.002 197.1);     /* same as card */
   --popover-foreground: oklch(0.145 0 0);

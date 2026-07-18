@@ -111,6 +111,7 @@ export const data: PortfolioData = {
       items: [
         { name: "LangGraph", iconKey: "siLanggraph" },
         { name: "System Design", iconKey: "" },
+        { name: "Accessibility", iconKey: "" },
       ],
     },
   ],
