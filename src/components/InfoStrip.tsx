@@ -9,7 +9,7 @@ interface InfoItem {
 
 export function InfoStrip({ items }: { items: InfoItem[] }) {
   return (
-    <div className="flex max-md:flex-col md:flex-wrap gap-x-4 gap-y-2 text-sm text-muted-foreground md:items-center">
+    <div className="flex gap-x-4 gap-y-2 text-sm text-muted-foreground max-md:flex-col md:flex-wrap md:items-center">
       {items.map((item, idx) => {
         const Icon = item.icon;
         const content = (
@@ -20,9 +20,7 @@ export function InfoStrip({ items }: { items: InfoItem[] }) {
         );
         return (
           <span key={idx} className="inline-flex items-center gap-4">
-            {idx > 0 && (
-              <span className="h-3 w-px bg-border max-md:hidden" />
-            )}
+            {idx > 0 && <span className="h-3 w-px bg-border max-md:hidden" />}
             {item.href ? (
               <a
                 href={item.href}

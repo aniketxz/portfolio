@@ -11,7 +11,7 @@ export function GithubContributionGraph({ data }: { data: PortfolioData }) {
   const contributions = getCachedContributions(data.githubUsername);
 
   return (
-    <div className="card-surface flex flex-col overflow-hidden">
+    <div className="flex flex-col overflow-hidden card-surface">
       <div className="space-y-4 px-6 py-4">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div>
@@ -27,7 +27,7 @@ export function GithubContributionGraph({ data }: { data: PortfolioData }) {
             href={data.social.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-link inline-flex items-center gap-1 text-sm"
+            className="inline-flex items-center gap-1 text-sm text-link"
           >
             View profile
           </a>

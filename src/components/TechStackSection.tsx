@@ -29,7 +29,7 @@ export function TechStackSection({ data }: TechStackSectionProps) {
         {data.techStack.map((group) => (
           <div key={group.category} className="flex flex-row gap-2 sm:gap-4">
             {/* Category label */}
-            <span className="w-20 text-wrap sm:w-28 shrink-0 text-sm font-medium text-muted-foreground sm:pt-1.5 sm:text-right">
+            <span className="w-20 shrink-0 text-sm font-medium text-wrap text-muted-foreground sm:w-28 sm:pt-1.5 sm:text-right">
               {group.category}
             </span>
 

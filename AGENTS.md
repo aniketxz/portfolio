@@ -1,6 +1,7 @@
 # Portfolio — Agent Guide
 
 <!-- BEGIN:nextjs-agent-rules -->
+
 ## Next.js Version Warning
 
 This is **Next.js 16.2.3** with **Turbopack** — NOT the Next.js you know from training data.
@@ -58,31 +59,32 @@ Do NOT hardcode text into components. Every piece of data must come from this fi
 
 ### Key fields
 
-| Field | Notes |
-|-------|-------|
-| `name` | First name used in the hero heading |
-| `title` | Role string, shown in hero subtitle |
-| `bio` | One-paragraph hero bio |
-| `about` | Array of `string` — each is a paragraph in the About section |
-| `resumeUrl` | Must link to the actual resume PDF (Google Drive), not GitHub |
-| `email` | Used in hero CTA + footer mailto |
-| `calUrl` | Optional booking link — leave `""` if unused |
-| `quote` | `{ text, author }` shown as a `<blockquote>` above the footer |
-| `social.twitter` | Set to `undefined` if no Twitter (link is conditionally rendered) |
-| `social.linkedin` | Full URL |
-| `social.github` | Full URL |
-| `githubUsername` | Used for the GitHub contribution chart URL |
-| `experience[]` | `role` is displayed prominently (bold), `company` is secondary |
-| `projects[].url` | GitHub/source URL |
-| `projects[].liveUrl` | Optional — renders "Live demo" link if set |
-| `projects[].image` | Must be an Unsplash URL (`images.unsplash.com`) — see image rules below |
-| `blogs[].url` | Must be a real URL — placeholder `blog.example.com` URLs hurt credibility |
+| Field                | Notes                                                                     |
+| -------------------- | ------------------------------------------------------------------------- |
+| `name`               | First name used in the hero heading                                       |
+| `title`              | Role string, shown in hero subtitle                                       |
+| `bio`                | One-paragraph hero bio                                                    |
+| `about`              | Array of `string` — each is a paragraph in the About section              |
+| `resumeUrl`          | Must link to the actual resume PDF (Google Drive), not GitHub             |
+| `email`              | Used in hero CTA + footer mailto                                          |
+| `calUrl`             | Optional booking link — leave `""` if unused                              |
+| `quote`              | `{ text, author }` shown as a `<blockquote>` above the footer             |
+| `social.twitter`     | Set to `undefined` if no Twitter (link is conditionally rendered)         |
+| `social.linkedin`    | Full URL                                                                  |
+| `social.github`      | Full URL                                                                  |
+| `githubUsername`     | Used for the GitHub contribution chart URL                                |
+| `experience[]`       | `role` is displayed prominently (bold), `company` is secondary            |
+| `projects[].url`     | GitHub/source URL                                                         |
+| `projects[].liveUrl` | Optional — renders "Live demo" link if set                                |
+| `projects[].image`   | Must be an Unsplash URL (`images.unsplash.com`) — see image rules below   |
+| `blogs[].url`        | Must be a real URL — placeholder `blog.example.com` URLs hurt credibility |
 
 ### SKILLS array
 
 ```ts
 export const SKILLS = [ siTypescript, siNodedotjs, siReact, siNextdotjs, ... ];
 ```
+
 Order matters — badges render left-to-right. Import icons from `simple-icons` (e.g. `siNodedotjs`, `siPostgresql`). Browse available icons at https://simpleicons.org.
 
 ---
@@ -90,31 +92,38 @@ Order matters — badges render left-to-right. Import icons from `simple-icons` 
 ## Styling Rules
 
 ### Tailwind CSS v4
+
 This project uses **Tailwind v4**, which has a different config model than v3:
+
 - No `tailwind.config.js` — configuration is done in CSS with `@theme` directives if needed.
 - The import in `globals.css` is `@import "tailwindcss"` (not `@tailwind base/components/utilities`).
 - The dark mode variant is registered as `@custom-variant dark (&:where(.dark, .dark *))`.
 - Gradient syntax changed: use `bg-linear-to-br` instead of `bg-gradient-to-br`.
 
 ### Dark Mode
+
 - Toggled via the `.dark` class on `<html>`.
 - Controlled by `useTheme.ts` hook (reads `localStorage` + `prefers-color-scheme`).
 - Always include dark variants: `dark:text-neutral-100`, `dark:bg-neutral-900`, etc.
 - A FOUC-prevention script in `layout.tsx` applies the class before React hydrates.
 
 ### Color Palette
+
 The design uses a neutral monochrome palette. Use only these families unless explicitly told otherwise:
+
 - Text: `neutral-900` (dark) / `neutral-100` (light) for primary, `neutral-500`/`neutral-400` for secondary
 - Backgrounds: `white` / `neutral-900` / `neutral-950`
 - Borders: `neutral-100`/`neutral-800` (solid) or `black/20`/`white/10` (dashed)
 - Accent: gradient `from-indigo-400 via-purple-500 to-pink-500` (avatar only — keep accents minimal)
 
 ### Typography
+
 - Body font: **Hanken Grotesk** (`--font-hanken-grotesk`), loaded via `next/font/google`
 - Mono font: **Geist Mono** (`--font-geist-mono`), loaded via `next/font/google`
 - Do NOT change the font stack without updating `layout.tsx` and `globals.css`.
 
 ### Spacing Pattern
+
 Sections are vertically spaced with `mt-20` between them. The hero uses `pt-12` (accounts for the fixed navbar). Do not break this rhythm when adding new sections.
 
 ---
@@ -122,17 +131,22 @@ Sections are vertically spaced with `mt-20` between them. The hero uses `pt-12` 
 ## Component Rules
 
 ### `SkillBadge`
+
 Props: `name: string`, `icon?: SimpleIcon`, `size?: "sm" | "xs"`, `variant?: "icon-text" | "text-only"`
+
 - `size="sm"` → used in hero skill row
 - `size="xs"` → used in experience skills row
 
 ### `Navbar` (client component)
+
 - Uses `useTheme` hook — must remain a `"use client"` component.
 - `navLinks` array controls visible nav items. Only add a link if the target `id` exists on the page.
 - Navbar height is ~64px — `scroll-padding-top: 67px` in `globals.css` accounts for this.
 
 ### Section anchors
+
 Every section that appears in `navLinks` must have a matching `id` attribute:
+
 ```
 #about      → <section id="about">     in HeroSection
 #experience → <section id="experience"> in ExperienceSection
@@ -142,6 +156,7 @@ Every section that appears in `navLinks` must have a matching `id` attribute:
 ```
 
 ### Images in projects
+
 - **Always use `next/image`** (`import Image from "next/image"`) — never bare `<img>` tags for project images.
 - `images.unsplash.com` is the only whitelisted external domain (see `next.config.ts`).
 - To add another external image domain, add a new `remotePatterns` entry in `next.config.ts`.

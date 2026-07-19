@@ -8,19 +8,12 @@ export function AboutSection({ data }: AboutSectionProps) {
   return (
     <section id="about">
       <div>
-        <p className="section-eyebrow">
-          Who I am
-        </p>
-        <h2 className="section-heading">
-          About Me
-        </h2>
+        <p className="section-eyebrow">Who I am</p>
+        <h2 className="section-heading">About Me</h2>
       </div>
       <div className="mt-8 flex flex-col gap-4">
         {data.about.map((paragraph, i) => (
-          <p
-            key={i}
-            className="leading-relaxed text-sm text-muted-foreground"
-          >
+          <p key={i} className="text-sm leading-relaxed text-muted-foreground">
             {paragraph}
           </p>
         ))}
