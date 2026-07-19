@@ -9,7 +9,7 @@ interface EducationSectionProps {
 }
 
 export function EducationSection({ data }: EducationSectionProps) {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   function toggle(index: number) {
     setOpenIndex((prev) => (prev === index ? null : index));

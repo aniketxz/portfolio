@@ -16,9 +16,9 @@ export const SKILLS = [
   siNextdotjs,
   siTailwindcss,
   siNodedotjs,
-  siDocker,
   siMongodb,
   siPostgresql,
+  siDocker,
 ];
 
 export const data: PortfolioData = {
@@ -159,8 +159,7 @@ export const data: PortfolioData = {
       name: "Nodebase AI Integration",
       description:
         "A visual workflow builder using React Flow and Inngest for fault-tolerant, multi-step LLM workflows.",
-      image:
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
+      image: "/nodebase.png",
       tags: [
         "Next.js",
         "React Flow",
@@ -169,25 +168,34 @@ export const data: PortfolioData = {
         "Inngest",
         "PostgreSQL",
       ],
-      url: "https://github.com/aniketxz",
+      liveUrl: "https://nodebase-five-delta.vercel.app",
+      githubUrl: "https://github.com/aniketxz/nodebase",
     },
     {
       name: "Seeker",
       description:
         "Interactive video learning interface with real-time milestone tracking and Stripe payment integration.",
-      image:
-        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80",
+      image: "/seeker.png",
       tags: ["React.js", "Node.js", "MongoDB", "Clerk", "Stripe"],
-      url: "https://github.com/aniketxz",
+      liveUrl: "https://seeker-hq.vercel.app",
+      githubUrl: "https://github.com/aniketxz/seeker",
     },
     {
       name: "Logbook",
       description:
         "Content creation platform featuring rich-text authoring and optimized client-side data fetching.",
-      image:
-        "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&q=80",
+      image: "/logbook.png",
       tags: ["React.js", "Node.js", "TanStack Query", "ImageKit", "MongoDB"],
-      url: "https://github.com/aniketxz",
+      liveUrl: "https://logbook-hq.vercel.app",
+      githubUrl: "https://github.com/aniketxz/logbook",
+    },
+    {
+      name: "CloudPins",
+      description: "An open board to share thoughts anonymously.",
+      image: "/cloud_pins.png",
+      tags: ["React.js", "Vite", "Tailwind CSS"],
+      liveUrl: "https://sticky-wall-tan.vercel.app/",
+      githubUrl: "https://github.com/aniketxz/stickywall",
     },
   ],
   blogs: [

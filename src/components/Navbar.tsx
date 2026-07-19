@@ -6,9 +6,9 @@ import Link from "next/link";
 
 const navLinks = [
 	{ label: "About", href: "#about" },
-	{ label: "Experience", href: "#experience" },
 	{ label: "Projects", href: "#projects" },
-	{ label: "Blogs", href: "#blogs" },
+	{ label: "Experience", href: "#experience" },
+	// { label: "Blogs", href: "#blogs" },
 	{ label: "Contact", href: "#contact" },
 ];
 
@@ -19,7 +19,7 @@ export function Navbar() {
 		<nav className="sticky top-0 z-20 rounded-md backdrop-blur-sm">
 			<div className="container border-b border-border py-3 mx-auto flex max-w-3xl items-center justify-between px-6">
 				<div className="flex flex-wrap items-center gap-2 sm:gap-4">
-					<Link href="/" className="text-muted-foreground">
+					<Link href="/" className="max-sm:hidden text-muted-foreground">
 						{"</>"}
 					</Link>
 					{navLinks.map((link) => (
