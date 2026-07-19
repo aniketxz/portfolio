@@ -23,14 +23,14 @@ export function HeroSection({ data }: HeroSectionProps) {
         />
       </div>
 
-      <div className="mt-10 flex flex-col gap-3">
+      <div className="mt-9 flex flex-col gap-3">
         <p className="text-sm font-medium text-neutral-400 dark:text-neutral-500">
           Hi! I am
         </p>
         <h1 className="text-4xl font-bold tracking-tight text-foreground md:text-6xl">
           {data.name}
         </h1>
-        <span className="text-muted-foreground">
+        <span className="text-sm text-muted-foreground">
           {data.title}
           <span className="mx-2">·</span>
           B.Tech CSE &apos;26
@@ -39,7 +39,7 @@ export function HeroSection({ data }: HeroSectionProps) {
           {data.bio}
         </p>
 
-        <div className="mt-4 flex flex-wrap gap-2">
+        <div className="mt-3 flex flex-wrap gap-2">
           {SKILLS.map((skill, idx) => (
             <SkillBadge
               key={idx}
@@ -71,7 +71,7 @@ export function HeroSection({ data }: HeroSectionProps) {
         />
       </div>
 
-      <div className="mt-8 flex flex-wrap gap-4">
+      <div className="mt-6 flex flex-wrap gap-4">
         <a
           href={data.resumeUrl}
           target="_blank"

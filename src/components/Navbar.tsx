@@ -17,8 +17,8 @@ export function Navbar() {
 
   return (
     <nav className="sticky top-0 z-20 rounded-md backdrop-blur-sm">
-      <div className="container mx-auto flex max-w-3xl items-center justify-between border-b border-border px-6 py-3">
-        <div className="flex flex-wrap items-center gap-2 sm:gap-4">
+      <div className="container mx-auto flex max-w-3xl items-center justify-between border-b border-border px-4 py-3 sm:px-6">
+        <div className="flex flex-wrap items-center gap-3 sm:gap-4">
           <Link href="/" className="text-muted-foreground max-sm:hidden">
             {"</>"}
           </Link>

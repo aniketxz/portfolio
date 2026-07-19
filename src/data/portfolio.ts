@@ -24,20 +24,20 @@ export const SKILLS = [
 export const data: PortfolioData = {
   name: "Aniket Kumar",
   title: "Full Stack Developer",
-  bio: "I build high-performance, scalable web applications using TypeScript, Next.js, and Node.js. Experienced in migrating complex systems to modern stacks and architecting AI-integrated workflows.",
+  bio: "I enjoy solving real-world problems with software. I'm always learning and building better products.",
   about: [
-    "Software Engineer with a focus on high-velocity development and performance optimization.",
-    "Specialized in Next.js, React Native, and robust backend architectures with a track record of reducing load times by 90%.",
-    "Currently pursuing a Bachelor of Technology in Computer Science and Engineering.",
+    "Passionate about building scalable, high-performance web applications and modern backend technologies.",
+    "Experienced in designing REST APIs, authentication systems, databases, workflow automation, and AI-powered features while emphasizing clean architecture and maintainable code.",
+    "Graduated with a Bachelor of Technology in Computer Science and Engineering in 2026.",
   ],
-  resumeUrl:
-    "https://drive.google.com/file/d/1LzQfyG3PJ6vKXB64iOUe-wU8_uuPG1rV/view",
+  resumeUrl: "/resume.pdf",
   email: "aniketkumar8x@gmail.com",
   calUrl: "",
   location: "Noida, UP",
   timezone: "GMT+5:30",
   website: "https://aniketxz.dev",
   phone: "+91 950 823 6050",
+  githubUsername: "aniketxz",
   quote: {
     text: "I'm a very neat monster.",
     author: "Dexter Morgan",
@@ -47,7 +47,6 @@ export const data: PortfolioData = {
     linkedin: "https://linkedin.com/in/aniketxz",
     github: "https://github.com/aniketxz",
   },
-  githubUsername: "aniketxz",
   techStack: [
     {
       category: "Languages",
